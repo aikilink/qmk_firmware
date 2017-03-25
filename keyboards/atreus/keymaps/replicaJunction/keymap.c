@@ -1,9 +1,9 @@
 /*
  * Keyboard: Atreus
- * Keymap:   replicaJunction - modified my aikilink for Dvorak use
+ * Keymap:   replicaJunction - modified by aikilink for Dvorak use
  * Version:  0.4
  *
- * This keymap is designed to complement my Ergodox keyboard layout, found in keyboards/ergodox_ez.
+ * NULL-This keymap is designed to complement my Ergodox keyboard layout, found in keyboards/ergodox_ez.
  * The Atreus keyboard is a 40% board whose design was heavily influenced by the Ergodox. I now
  * have both keyboards, so I've designed these layouts in an effort to make switching between the
  * two as easy as possible.
