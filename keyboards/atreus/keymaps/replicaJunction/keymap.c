@@ -1,6 +1,6 @@
 /*
  * Keyboard: Atreus
- * Keymap:   replicaJunction
+ * Keymap:   replicaJunction - modified my aikilink for Dvorak use
  * Version:  0.4
  *
  * This keymap is designed to complement my Ergodox keyboard layout, found in keyboards/ergodox_ez.
@@ -24,7 +24,7 @@
 
 // Note that whatever is set as layer 0 will be the default layer of the keyboard.
 
-#define _CO 0 // Colemak
+#define _CO 0 // -Colemak- Dvorak
 #define _QW 1 // QWERTY
 #define _GA 2 // Gaming
 #define _EX 3 // Extend
@@ -49,24 +49,24 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /*
- * Colemak-ModDH
+ * Dvorak
  *
  * ,----------------------------------.                     ,----------------------------------.
- * |   Q  |   W  |   F  |   P  |   B  |                     |   J  |   L  |   U  |   Y  |   ;  |
+ * |   '  |   ,  |   .  |   P  |   Y  |                     |   F  |   G  |   C  |   R  |   L  |
  * +------+------+------+------+------|                     +------+------+------+------+------|
- * |   A  |   R  |   S  |   T  |   G  |                     |   M  |   N  |   E  |   I  |   O  |
+ * |   A  |   O  |   E  |   U  |   I  |                     |   D  |   H  |   T  |   N  |   S  |
  * +------+------+------+------+------|                     +------+------+------+------+------|
- * |Z Shft|   X  |   C  |   D  |   V  | ,------.   ,------. |   K  |   H  |   ,  |   .  |/ Shft|
+ * |; Shft|   Q  |   J  |   K  |   X  | ,------.   ,------. |   B  |   M  |   W  |   V  |Z Shft|
  * +------+------+------+------+------| | Ctrl |   |  Alt | +------+------+------+------+------|
- * |  Esc |  Gui |  Tab |  _FN | Bksp | |  Del |   | Enter| |Sp/_NU|  _EX |   -  |   '  |   =  |
+ * |  Esc |  Gui |  Tab |  _FN |  SP  | |  Del |   | Enter| |Bksp/_NU| _EX|   -  |   /  |   =  |
  * `----------------------------------' `------'   `------' `----------------------------------'
  *
  */
 [_CO] = KEYMAP(
-  KC_Q,        KC_W,    KC_F,    KC_P,    KC_B,                                   KC_J,            KC_L,    KC_U,    KC_Y,    KC_SCLN,
-  KC_A,        KC_R,    KC_S,    KC_T,    KC_G,                                   KC_M,            KC_N,    KC_E,    KC_I,    KC_O,
-  SFT_T(KC_Z), KC_X,    KC_C,    KC_D,    KC_V,                                   KC_K,            KC_H,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH),
-  KC_ESC,      KC_LGUI, KC_TAB,  MO(_FN), KC_BSPC, CTL_T(KC_DEL), ALT_T(KC_ENT),  LT(_NU, KC_SPC), MO(_EX), KC_MINS, KC_QUOT, KC_EQL
+  KC_QUOT,     KC_COMM, KC_DOT,  KC_P,    KC_Y,                                   KC_F,            KC_G,    KC_C,    KC_R,    KC_L,
+  KC_A,        KC_O,    KC_E,    KC_U,    KC_I,                                   KC_D,            KC_H,    KC_T,    KC_N,    KC_S,
+  SFT_T(KC_SCLN), KC_Q, KC_J,    KC_K,    KC_X,                                   KC_B,            KC_M,    KC_W,    KC_V,    SFT_T(KC_Z),
+  KC_ESC,      KC_LGUI, KC_TAB,  MO(_FN), KC_SPC, CTL_T(KC_DEL), ALT_T(KC_ENT),  LT(_NU, KC_BSPC), MO(_EX), KC_MINS, KC_SLSH, KC_EQL
 ),
 
 /*
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * +------+------+------+------+------|                     +------+------+------+------+------|
  * |Z Shft|   X  |   C  |   V  |   B  | ,------.   ,------. |   N  |   M  |   ,  |   .  |/ Shft|
  * +------+------+------+------+------| | Ctrl |   |  Alt | +------+------+------+------+------|
- * |  Esc |  Gui |  Tab |  _FN | Bksp | |  Del |   | Enter| |Sp/_NU|  _EX |   -  |   '  |   =  |
+ * |  Esc |  Gui |  Tab |  _FN | Space| |  Del |   | Enter| |Bspc/_NU| _EX |  -  |   '  |   =  |
  * `----------------------------------' `------'   `------' `----------------------------------'
  *
  */
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Q,        KC_W,    KC_E,    KC_R,    KC_T,                                  KC_Y,            KC_U,    KC_I,    KC_O,    KC_P,
   KC_A,        KC_S,    KC_D,    KC_F,    KC_G,                                  KC_H,            KC_J,    KC_K,    KC_L,    KC_SCLN,
   SFT_T(KC_Z), KC_X,    KC_C,    KC_V,    KC_B,                                  KC_N,            KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH),
-  KC_ESC,      KC_LGUI, KC_TAB,  MO(_FN), KC_BSPC, CTL_T(KC_DEL), ALT_T(KC_ENT), LT(_NU, KC_SPC), MO(_EX), KC_MINS, KC_QUOT, KC_EQL
+  KC_ESC,      KC_LGUI, KC_TAB,  MO(_FN), KC_SPC, CTL_T(KC_DEL), ALT_T(KC_ENT), LT(_NU, KC_BSPC), MO(_EX), KC_MINS, KC_QUOT, KC_EQL
 ),
 
 /*
